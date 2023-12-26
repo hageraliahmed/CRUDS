@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="Cruds, cruds system, training, html,css,js"
+    />
+    <meta name="description" content="Hello Worlds" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="auther" content="Mustafa Ghaly" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="imgs/avatar-01.png" />
+    <title>CRUDS System</title>
+  </head>
+  <body dir="ltr">
+    <div class="container">
+      <div class="head">
+        <h1>cruds</h1>
+        <p>product management system</p>
+      </div>
+      <div class="inputs">
+        <input type="text" class="title" placeholder="Title" />
+        <div class="price-data">
+          <input type="number" class="price" placeholder="Price" />
+          <input type="number" class="taxes" placeholder="Taxes" />
+          <input type="number" class="ads" placeholder="Ads" />
+          <input type="number" class="discount" placeholder="Discount" />
+          <p class="total"></p>
+        </div>
+        <input type="number" class="count" placeholder="Count" />
+        <input type="text" class="category" placeholder="Category" />
+        <button class="submit">CREATE</button>
+      </div>
+      <div class="outputs">
+        <div class="search-data">
+          <input type="text" placeholder="Search" class="search" />
+          <div class="search-btns">
+            <button
+              onclick="searchby(this.getAttribute('class'))"
+              class="bytitle"
+            >
+              Search By Title
+            </button>
+            <button
+              onclick="searchby(this.getAttribute('class'))"
+              class="bycate"
+            >
+              Search By Category
+            </button>
+          </div>
+        </div>
+        <button class="delete-all"></button>
+        <table>
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>category</th>
+              <th>update</th>
+              <th>delete</th>
+            </tr>
+          </thead>
+          <tbody class="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+:root {
+  --main-color: #293462;
+  --hover-color: #212b50;
+  --btn-color: #d61c4e;
+  --btn-hover: #bd1a45;
+  --main-padding: 0.9em;
+  --sec-padding: 0.7em;
+  --main-margin: 0.5em;
+  --sec-margin: 1em;
+  --back-color: rgb(41, 41, 41);
+  --input-radius: 0.4em;
+  --btn-radius: 2em 2em;
+  --transition: 0.4s;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: middle;
+}
+body {
+  background-color: var(--back-color);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+input {
+  width: 100%;
+  padding: var(--main-padding);
+  margin: var(--main-margin) 0;
+  border-radius: var(--input-radius);
+  background-color: var(--main-color);
+  color: white;
+  border-bottom: 2px solid white;
+  transition: var(--transition);
+  font-weight: 600;
+}
+input:focus {
+  transform: scale(1.05);
+  background-color: var(--hover-color);
+}
+input:focus::placeholder {
+  opacity: 0;
+}
+input::placeholder {
+  color: white;
+  font-weight: 200;
+}
+button {
+  width: 100%;
+  text-align: center;
+  background-color: var(--btn-color);
+  transition: var(--transition);
+  font-size: 1em;
+  font-weight: bold;
+  padding: var(--sec-padding);
+  color: white;
+  border-radius: var(--btn-radius);
+  margin: var(--main-margin) 0;
+}
+button:hover {
+  transform: scale(1.02);
+  background-color: var(--btn-hover);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+/* global */
+
+/* **** start container **** */
+.container {
+  width: 80%;
+  margin: 30px auto;
+}
+/* **** end container **** */
+/* **** start head **** */
+.container .head {
+  text-align: center;
+  text-transform: uppercase;
+}
+.container .head h1 {
+  margin-bottom: var(--main-margin);
+  font-size: 2.2em;
+}
+.container .head p {
+  font-size: 1.2em;
+  font-weight: lighter;
+  margin-bottom: var(--main-margin);
+}
+/* **** end head **** */
+/* **** start inputs **** */
+.inputs .price-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--main-padding);
+}
+.inputs .price-data input {
+  flex: 1;
+}
+.inputs .price-data p {
+  flex: 1;
+  background-color: var(--btn-color);
+  padding: 8px;
+  border-radius: var(--input-radius);
+  margin: var(--main-margin) 0;
+}
+.inputs .price-data p::before {
+  content: "Total: ";
+}
+/* **** end inputs **** */
+/* out puts */
+.search-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--main-padding);
+  margin-bottom: var(--main-margin);
+}
+.search-btns button {
+  flex: 1;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+}
+
+table th {
+  text-transform: uppercase;
+}
+table th,
+table,
+td {
+  padding: var(--sec-padding);
+}
+td button:hover {
+  transform: scale(1) !important;
+  letter-spacing: normal;
+}
+
+.delete-all {
+  display: none;
+}
+.delete-all::before {
+  content: "Delete All ";
+}
